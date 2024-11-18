@@ -122,15 +122,14 @@ export default async function Home({ searchParams: rawSearchParams }) {
       getIngredients(),
     ]);
 
-  // Add null checks and default values
   const {
-    recipes = [], // Default to empty array if undefined
-    total = 0, // Default to 0 if undefined
-    totalPages = 0, // Default to 0 if undefined
-    currentPage = 1, // Default to 1 if undefined
-    limit: resultLimit = 20, // Default to 20 if undefined
+    recipes,
+    total,
+    totalPages,
+    currentPage,
+    limit: resultLimit,
     error,
-  } = recipesData || {};
+  } = recipesData;
 
   const filters = {
     tags,
