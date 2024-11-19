@@ -515,7 +515,6 @@ export default async function RecipeDetail({ params }) {
               <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
                 Ingredients
               </h2>
-              <VoiceAssistant instructions={recipe.instructions} />
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {Object.entries(recipe.ingredients).map(
                   ([ingredient, amount], index) => (
@@ -538,6 +537,7 @@ export default async function RecipeDetail({ params }) {
               <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
                 Instructions
               </h2>
+              <VoiceAssistant instructions={recipe.instructions} />
               <ol className="space-y-4">
                 {recipe.instructions.map((step, index) => (
                   <li
