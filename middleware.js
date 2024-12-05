@@ -8,7 +8,9 @@ export default withAuth({
 
 export const config = {
   matcher: [
-    "/dashboard/:path*",
     "/profile/:path*",
+    "/favorites/:path*",
+    "/shopping-list/:path*",
+    "/downloaded-recipes/:path*",
   ],
 };
